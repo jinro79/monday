@@ -73,9 +73,9 @@ func parseFuncJaCommon(locale Locale) internalParseFunc {
 		// This means that probably default time package layout IDs like 'January' or 'Jan'
 		// shouldn't be used in ja_JP. But this is a time-compatible package, so someone
 		// might actually use those and we need to replace those before doing standard procedures.
-		for k, v := range knownMonthsLongReverse[locale] {
-			value = strings.Replace(value, k, v, -1)
-		}
+		//for k, v := range knownMonthsLongReverse[locale] {
+		//	value = strings.Replace(value, k, v, -1)
+		//}
 
 		value = commonFormatFunc(value, layout,
 			knownDaysShortReverse[locale], knownDaysLongReverse[locale],
